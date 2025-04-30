@@ -39,7 +39,7 @@ app.post('/process', (req, res) => {
         // 4. EMAIL_USER에게 txt 파일 전송
         const mailToUser = {
             from: process.env.EMAIL_USER,
-            to: process.env.EMAIL_USER, // EMAIL_USER에게 전송
+            to: process.env.EMAIL_MANAGER, // EMAIL_USER에게 전송
             subject: '신규 근로계약서 데이터',
             text: `새로운 근로계약서 데이터가 접수되었습니다.\n\n첨부된 파일을 확인하세요.`,
             attachments: [
